@@ -1,0 +1,26 @@
+{
+  "name": "web-scraper",
+  "version": "0.0.1",
+  "description": "A simple API that allows you to scrape a webpage.  You pass (POST) it a URL to scrape and a selector to find on that page.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "cheerio": "^0.19.0",
+    "express": "^4.12.3",
+    "request": "^2.55.0"
+  },
+  "engines": {
+    "node": "0.12.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "html scraper",
+    "webpage scraper",
+    "node",
+    "express"
+  ],
+  "license": "MIT"
+}
