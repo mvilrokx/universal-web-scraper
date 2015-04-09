@@ -24,11 +24,16 @@ router.get('/', function(req, res) {
 });
 
 router.post('/scrape', function(req, res) {
+  var selected;
   request(req.body.url, function (error, response, body) {
     if (!error) {
       var $ = cheerio.load(body);
-      var profileImgSrc = $(req.body.selector).attr('src');
-      res.json({ imgSrc: profileImgSrc });
+      if (req.body.attr) {
+        selected = $(req.body.selector).attr(req.body.attr);
+      } else {
+        selected = $(req.body.selector).html();
+      }
+      res.json({ scraped: selected });
     } else {
       res.json({ error: error });
     }
