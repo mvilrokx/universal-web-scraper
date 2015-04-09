@@ -36,3 +36,7 @@ When finished, deploy the application to heroku with
     $ git push heroku master
 
 This will give you a application URL you can now use to call the API, just like you did locally, except you replace localhost:8080 with the URL proviced.
+
+# Live Demo
+
+    $ curl -X POST -d "url=https://www.twitter.com/mvilrokx&selector=.ProfileAvatar-image&attr=src" http://htmlscraper.herokuapp.com/api/scrape
