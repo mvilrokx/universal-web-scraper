@@ -1,4 +1,6 @@
 logs
 *.log
+*.zip
+*.tgz
 node_modules
 .env
