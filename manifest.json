@@ -3,6 +3,8 @@
     "majorVersion":"0.12"
   },
   "command": "node server.js",
-  "release": {1.0.0},
+  "release": {
+    "version": "1.0.0"
+  },
   "notes": ""
 }
