@@ -20,7 +20,7 @@ router.use(function (req, res, next) {
 })
 
 router.get('/', function (req, res) {
-  res.json({ message: 'Universal Web Scraper is UP!' })
+  res.json({ message: 'Universal Web Scraper Service is UP!' })
 })
 
 router.post('/scrape', function (req, res) {
