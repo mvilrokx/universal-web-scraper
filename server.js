@@ -20,7 +20,7 @@ router.use(function (req, res, next) {
 })
 
 router.get('/', function (req, res) {
-  res.json({ message: 'Universal Webscraper Service is up!!' })
+  res.json({ message: 'Universal Webscraper Service is up!' })
 })
 
 router.post('/scrape', function (req, res) {
