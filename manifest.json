@@ -1,10 +1,10 @@
 {
   "runtime":{
-    "majorVersion":"0.12"
+    "majorVersion":"4.4"
   },
   "command": "node server.js",
   "release": {
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "notes": ""
 }
