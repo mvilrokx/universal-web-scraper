@@ -1,6 +1,6 @@
 {
   "name": "web-scraper",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "A simple API that allows you to scrape a webpage.  You pass (POST) it a URL to scrape and a selector to find on that page.",
   "main": "server.js",
   "dependencies": {
@@ -10,7 +10,7 @@
     "request": "^2.55.0"
   },
   "engines": {
-    "node": "0.12.x"
+    "node": "7.4.x"
   },
   "repository": {
     "type": "git",
