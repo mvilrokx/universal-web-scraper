@@ -1,33 +1,33 @@
 // Build from these examples:
 //    https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4
 //    http://www.smashingmagazine.com/2015/04/08/web-scraping-with-nodejs/
-var express = require('express')
-var request = require('request')
-var cheerio = require('cheerio')
-var bodyParser = require('body-parser')
+const express = require('express')
+const request = require('request')
+const cheerio = require('cheerio')
+const bodyParser = require('body-parser')
 
-var app = express()
-var port = process.env.PORT || 8080
-var router = express.Router()
+const app = express()
+const port = process.env.PORT || 8080
+const router = express.Router()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-router.use(function (req, res, next) {
+router.use( (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
 
-router.get('/', function (req, res) {
-  res.json({ message: 'Universal Webscraper Service is up! Hurray' })
+router.get('/', (req, res) => {
+  res.json({ message: 'Universal Webscraper Service is up!' })
 })
 
-router.post('/scrape', function (req, res) {
-  var selected
-  request(req.body.url, function (error, response, body) {
+router.post('/scrape', (req, res) => {
+  let selected
+  request(req.body.url, (error, response, body) => {
     if (!error) {
-      var $ = cheerio.load(body)
+      const $ = cheerio.load(body)
       if (req.body.attr) {
         selected = $(req.body.selector).attr(req.body.attr)
       } else {
